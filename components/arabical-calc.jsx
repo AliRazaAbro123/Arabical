@@ -81,16 +81,16 @@ function Calculator() {
   const buttonStyle =
     "p-3 bg-[#0B192C] shadow-2xl text-2xl text-white rounded-4xl hover:bg-[#1E3E62] max-sm:rounded-full";
 
-  const actionButtonStyle = "text-blue-700 font-bold"; // Style for action buttons
+  const actionButtonStyle = "text-yellow-700 font-bold"; // Style for action buttons
 
   return (
     <div className="h-screen w-full flex items-center justify-center bg-[#09122C] max-sm:w-full">
       <div className="bg-[#09122C] min-h-[26rem] shadow-lg rounded-lg p-2 max-sm:p-2 w-96 max-sm:w-full max-sm:h-screen max-sm:rounded-none">
-        <div className="mb-1 h-[30dvh] flex items-end justify-end text-right max-sm:text-4xl text-3xl text-blue-600 bg-[#09122C] p-2 rounded max-sm:h-[20%] max-sm:flex max-sm:items-center max-sm:justify-end overflow-hidden break-words whitespace-normal">
+        <div className="mb-1 h-[30dvh] flex items-end justify-end text-right max-sm:text-4xl text-3xl text-yellow-700 bg-[#09122C] p-2 rounded max-sm:h-[20%] max-sm:flex max-sm:items-center max-sm:justify-end overflow-hidden break-words whitespace-normal">
           {input || "۰"}
         </div>
         {result !== null && (
-          <div className="mb-2 max-sm:mt-[-2rem] text-right text-xl text-blue-700 max-sm:text-right">
+          <div className="mb-2 max-sm:mt-[-2rem] text-right text-xl text-yellow-700 max-sm:text-right">
             = {result}
           </div>
         )}
