@@ -1,7 +1,9 @@
 {
-  "name": "blogin",
-  "version": "0.1.0",
+  "name": "arabical",
+  "version": "1.0.0",
   "private": true,
+  "description": "A modern Arabic calculator built with Next.js, React, and Tailwind CSS for fast and efficient calculations.",
+  "keywords": ["Arabic calculator", "Next.js calculator", "React calculator", "math app", "Tailwind CSS", "Next.js"],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -19,5 +21,11 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4"
+  },
+  "author": "Ali Raza",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AliRazaAbro123/Arabical"
   }
 }

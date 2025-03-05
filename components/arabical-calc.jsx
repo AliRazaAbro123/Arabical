@@ -9,16 +9,16 @@ function Calculator() {
 
   // Mapping Arabic numerals to Sindhi numerals
   const arabicToSindhi = {
-    "0": "۰",
-    "1": "۱",
-    "2": "۲",
-    "3": "۳",
-    "4": "۴",
-    "5": "۵",
-    "6": "۶",
-    "7": "۷",
-    "8": "۸",
-    "9": "۹",
+    0: "۰",
+    1: "۱",
+    2: "۲",
+    3: "۳",
+    4: "۴",
+    5: "۵",
+    6: "۶",
+    7: "۷",
+    8: "۸",
+    9: "۹",
   };
 
   const sindhiToArabic = {
@@ -79,12 +79,14 @@ function Calculator() {
   }, [input]);
 
   const buttonStyle =
-    "p-3 bg-zinc-700 shadow-xl text-2xl text-white rounded-4xl hover:bg-zinc-800";
+    "p-3 bg-[#0B192C] shadow-2xl text-2xl text-white rounded-4xl hover:bg-[#1E3E62] max-sm:rounded-full";
+
+  const actionButtonStyle = "text-blue-700 font-bold"; // Style for action buttons
 
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-black max-sm:w-full">
-      <div className="bg-black min-h-96 shadow-lg rounded-lg p-2 max-sm:p-2 w-96 max-sm:w-full max-sm:h-screen max-sm:rounded-none">
-        <div className="mb-1 h-[30dvh] flex items-end justify-end text-right max-sm:text-4xl text-3xl text-blue-600 bg-black p-2 rounded max-sm:h-[20%] max-sm:flex max-sm:items-center max-sm:justify-end overflow-hidden break-words whitespace-normal">
+    <div className="h-screen w-full flex items-center justify-center bg-[#09122C] max-sm:w-full">
+      <div className="bg-[#09122C] min-h-[26rem] shadow-lg rounded-lg p-2 max-sm:p-2 w-96 max-sm:w-full max-sm:h-screen max-sm:rounded-none">
+        <div className="mb-1 h-[30dvh] flex items-end justify-end text-right max-sm:text-4xl text-3xl text-blue-600 bg-[#09122C] p-2 rounded max-sm:h-[20%] max-sm:flex max-sm:items-center max-sm:justify-end overflow-hidden break-words whitespace-normal">
           {input || "۰"}
         </div>
         {result !== null && (
@@ -93,7 +95,7 @@ function Calculator() {
           </div>
         )}
         <div
-          className="bg-black w-full grid grid-cols-4 gap-3 max-sm:absolute max-sm:bottom-0 max-sm:p-2 max-sm:left-0 max-sm:h-[60dvh] max-sm:mb-3"
+          className="bg-[#09122C] w-full grid grid-cols-4 gap-3 max-sm:absolute max-sm:bottom-0 max-sm:p-2 max-sm:left-0 max-sm:h-[60dvh] max-sm:mb-3"
           role="group"
           aria-label="Calculator Buttons"
         >
@@ -124,7 +126,20 @@ function Calculator() {
               onClick={() => handleClick(value)}
               className={buttonStyle}
             >
-              {value === "ڊيل" ? <FontAwesomeIcon icon={faBackspace} /> : value}
+              {value === "ڊيل" ? (
+                <FontAwesomeIcon
+                  icon={faBackspace}
+                  className={actionButtonStyle}
+                />
+              ) : (
+                <span
+                  className={
+                    /[۰۰+\-*/۰.%=صاف]/.test(value) ? actionButtonStyle : ""
+                  }
+                >
+                  {value}
+                </span>
+              )}
             </button>
           ))}
         </div>
@@ -132,5 +147,4 @@ function Calculator() {
     </div>
   );
 }
-
 export default Calculator;

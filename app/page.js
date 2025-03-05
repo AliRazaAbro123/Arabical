@@ -1,5 +1,5 @@
 import React from "react";
-import Calculator from "../components/sindhi-calc";
+import Calculator from "../components/arabical-calc";
 
 function page() {
   return (
