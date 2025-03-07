@@ -79,7 +79,7 @@ function Calculator() {
   }, [input]);
 
   const buttonStyle =
-    "p-3 bg-[#0B192C] shadow-2xl text-2xl text-white rounded-4xl hover:bg-[#1E3E62] max-sm:rounded-full";
+    "p-3 bg-[#0B192C] shadow-3xl text-2xl text-white rounded-4xl hover:bg-[#1E3E62] max-sm:rounded-full";
 
   const actionButtonStyle = "text-yellow-700 font-bold"; // Style for action buttons
 
