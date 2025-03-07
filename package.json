@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "description": "A modern Arabic calculator built with Next.js, React, and Tailwind CSS for fast and efficient calculations.",
-  "keywords": ["Arabic calculator", "Next.js calculator", "React calculator", "math app", "Tailwind CSS", "Next.js"],
+  "keywords": [
+    "Arabic calculator",
+    "Next.js calculator",
+    "React calculator",
+    "math app",
+    "Tailwind CSS",
+    "Next.js"
+  ],
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev --turbopack",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint"
   },
   "dependencies": {
